@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,192 +14,208 @@ import {
   ShieldIcon,
 } from "lucide-react";
 import { USER_PROGRAMS } from "@/constants";
+import { playButtonHover } from "@/lib/audio";
+
+interface ProgramCardProps {
+  program: typeof USER_PROGRAMS[0];
+  index: number;
+}
+
+const ProgramCard: React.FC<ProgramCardProps> = ({ program, index }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleHover = () => {
+    playButtonHover();
+  };
+
+  return (
+    <div
+      ref={cardRef}
+      className={`transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+      }`}
+      style={{ transitionDelay: `${index * 150}ms` }}
+    >
+      <Card
+        className="bg-card/90 backdrop-blur-sm border border-border/60 hover:border-primary/50 transition-all duration-300 overflow-hidden card-3d group h-full flex flex-col justify-between"
+        style={{
+          boxShadow: "0 4px 15px rgba(0,0,0,0.2)"
+        }}
+      >
+        <div>
+          {/* Card header with user info */}
+          <div className="flex items-center justify-between px-4 py-2 border-b border-border/40 bg-cyber-black/40 font-mono text-[9px]">
+            <div className="flex items-center gap-1.5">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              <span className="text-primary font-bold">USER_STATION.{program.id}</span>
+            </div>
+            <div className="text-muted-foreground uppercase font-bold">
+              {program.fitness_level}
+            </div>
+          </div>
+
+          <CardHeader className="pt-5 px-5 pb-4">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="h-12 w-12 rounded-full overflow-hidden border border-border/60 p-0.5 bg-cyber-black">
+                <img
+                  src={program.profilePic}
+                  alt={`${program.first_name}`}
+                  className="h-full w-full object-cover rounded-full"
+                />
+              </div>
+              <div>
+                <CardTitle className="text-base text-foreground font-bold font-mono">
+                  {program.first_name}
+                  <span className="text-primary">.exe</span>
+                </CardTitle>
+                <div className="text-[10px] text-muted-foreground flex items-center gap-1.5 mt-0.5 font-mono">
+                  <Users className="h-3.5 w-3.5 text-primary" />
+                  <span>{program.age}y &bull; {program.workout_days} days/wk</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-between items-center gap-4 font-mono text-[9px]">
+              <div className="px-2 py-0.5 bg-primary/10 rounded border border-primary/20 text-primary flex items-center gap-1 font-bold">
+                <Sparkles className="h-3 w-3" />
+                {program.fitness_goal.toUpperCase()}
+              </div>
+              <div className="text-muted-foreground flex items-center gap-1">
+                <Clock className="h-3 w-3" />
+                v1.2.4
+              </div>
+            </div>
+          </CardHeader>
+
+          <CardContent className="px-5 pb-2 font-mono text-[10px]">
+            {/* Program details */}
+            <div className="space-y-4 pt-2">
+              <div className="flex items-start gap-3">
+                <div className="p-1.5 rounded bg-primary/10 text-primary mt-0.5">
+                  <Dumbbell className="h-4 w-4" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-foreground truncate">
+                    {program.workout_plan.title}
+                  </h3>
+                  <p className="text-[9px] text-muted-foreground truncate">
+                    {program.equipment_access}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="p-1.5 rounded bg-cyber-violet/10 text-cyber-violet mt-0.5">
+                  <AppleIcon className="h-4 w-4" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-foreground truncate">{program.diet_plan.title}</h3>
+                  <p className="text-[9px] text-muted-foreground truncate">
+                    Macronutrients Optimized
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="p-1.5 rounded bg-cyber-lime/10 text-cyber-lime mt-0.5">
+                  <ShieldIcon className="h-4 w-4" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-foreground truncate">Active Safety Protocols</h3>
+                  <p className="text-[9px] text-muted-foreground truncate">
+                    Load Safeguards Configured
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Program description */}
+            <div className="mt-4 pt-4 border-t border-border/20 text-[10px] text-muted-foreground leading-relaxed">
+              <span className="text-primary font-bold">&gt; </span>
+              {program.workout_plan.description.substring(0, 110)}...
+            </div>
+          </CardContent>
+        </div>
+
+        <CardFooter className="px-5 py-4 border-t border-border/20 mt-4">
+          <Link href={`/programs/${program.id}`} className="w-full" onClick={handleHover}>
+            <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/95 text-[10px] uppercase font-bold tracking-wider py-2 rounded-lg">
+              View Specs
+              <ChevronRight className="ml-1.5 h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+        </CardFooter>
+      </Card>
+    </div>
+  );
+};
 
 const UserPrograms = () => {
+  const handleHover = () => {
+    playButtonHover();
+  };
+
   return (
-    <div className="w-full pb-24 pt-16 relative">
+    <div className="w-full pb-20 pt-10 relative font-mono">
       <div className="container mx-auto max-w-6xl px-4">
-        {/* HEADER- PROGRAM GALLERY */}
-        <div className="bg-card/90 backdrop-blur-sm border border-border rounded-lg overflow-hidden mb-16">
-          {/* HEADER BAR */}
-          <div className="flex items-center justify-between px-5 py-3 border-b border-border bg-background/70">
-            <div className="flex items-center gap-2">
-              <div className="w-2.5 h-2.5 rounded-full bg-primary"></div>
-              <span className="text-sm text-primary font-medium">Program Gallery</span>
-            </div>
-            <div className="text-sm text-muted-foreground">Featured Plans</div>
-          </div>
-
-          {/* HEADER CONTENT */}
-          <div className="p-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-foreground">AI-Generated </span>
-              <span className="text-primary">Programs</span>
-            </h2>
-
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-10">
-              Explore personalized fitness plans our AI assistant has created for other users
-            </p>
-
-            {/* STATS */}
-            <div className="flex items-center justify-center gap-16 mt-10 font-mono">
-              <div className="flex flex-col items-center">
-                <p className="text-3xl text-primary">500+</p>
-                <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">
-                  PROGRAMS
-                </p>
-              </div>
-              <div className="w-px h-12 bg-border"></div>
-              <div className="flex flex-col items-center">
-                <p className="text-3xl text-primary">3min</p>
-                <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">
-                  CREATION TIME
-                </p>
-              </div>
-              <div className="w-px h-12 bg-border"></div>
-              <div className="flex flex-col items-center">
-                <p className="text-3xl text-primary">100%</p>
-                <p className="text-sm text-muted-foreground uppercase tracking-wide mt-1">
-                  PERSONALIZED
-                </p>
-              </div>
-            </div>
-          </div>
+        
+        {/* Gallery Title/Header */}
+        <div className="text-center mb-12">
+          <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-primary/70 block mb-3">
+            COMMUNITY PORTAL
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 uppercase font-mono">
+            User <span className="text-primary neon-text">Program Database</span>
+          </h2>
+          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-4" />
+          <p className="text-muted-foreground max-w-lg mx-auto text-xs">
+            Review telemetry and schedules of fitness programs generated by other active users.
+          </p>
         </div>
 
         {/* Program cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {USER_PROGRAMS.map((program) => (
-            <Card
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {USER_PROGRAMS.map((program, idx) => (
+            <ProgramCard
               key={program.id}
-              className="bg-card/90 backdrop-blur-sm border border-border hover:border-primary/50 transition-colors overflow-hidden"
-            >
-              {/* Card header with user info */}
-              <div className="flex items-center justify-between px-4 py-2 border-b border-border bg-background/70">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm text-primary">USER.{program.id}</span>
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  {program.fitness_level.toUpperCase()}
-                </div>
-              </div>
-
-              <CardHeader className="pt-6 px-5">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="h-16 w-16 rounded-full overflow-hidden border border-border">
-                    <img
-                      src={program.profilePic}
-                      alt={`${program.first_name}`}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl text-foreground">
-                      {program.first_name}
-                      <span className="text-primary">.exe</span>
-                    </CardTitle>
-                    <div className="text-sm text-muted-foreground flex items-center gap-2 mt-1">
-                      <Users className="h-4 w-4" />
-                      {program.age}y • {program.workout_days}d/week
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex justify-between items-center gap-4">
-                  <div className="px-3 py-1 bg-primary/10 rounded border border-primary/20 text-sm text-primary flex items-center gap-2">
-                    <Sparkles className="h-4 w-4" />
-                    {program.fitness_goal}
-                  </div>
-                  <div className="text-sm text-muted-foreground flex items-center gap-2">
-                    <Clock className="h-4 w-4" />
-                    v3.5
-                  </div>
-                </div>
-              </CardHeader>
-
-              <CardContent className="px-5">
-                {/* Program details */}
-                <div className="space-y-5 pt-2">
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-md bg-primary/10 text-primary mt-0.5">
-                      <Dumbbell className="h-5 w-5" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-center">
-                        <h3 className="font-medium text-foreground">
-                          {program.workout_plan.title}
-                        </h3>
-                      </div>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        {program.equipment_access}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-md bg-secondary/10 text-secondary mt-0.5">
-                      <AppleIcon className="h-5 w-5" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-center">
-                        <h3 className="font-medium text-foreground">{program.diet_plan.title}</h3>
-                      </div>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        System optimized nutrition
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 rounded-md bg-primary/10 text-primary mt-0.5">
-                      <ShieldIcon className="h-5 w-5" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-center">
-                        <h3 className="font-medium text-foreground">AI Safety Protocols</h3>
-                      </div>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        Protection systems enabled
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Program description */}
-                <div className="mt-5 pt-5 border-t border-border">
-                  <div className="text-sm text-muted-foreground">
-                    <span className="text-primary">&gt; </span>
-                    {program.workout_plan.description.substring(0, 120)}...
-                  </div>
-                </div>
-              </CardContent>
-
-              <CardFooter className="px-5 py-4 border-t border-border">
-                <Link href={`/programs/${program.id}`} className="w-full">
-                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                    View Program Details
-                    <ChevronRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </CardFooter>
-            </Card>
+              program={program}
+              index={idx}
+            />
           ))}
         </div>
 
         {/* CTA section */}
         <div className="mt-16 text-center">
-          <Link href="/generate-program">
+          <Link href="/generate-program" onClick={handleHover}>
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/95 px-8 py-5 text-xs font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(24,206,242,0.25)] rounded-lg"
             >
               Generate Your Program
-              <Sparkles className="ml-2 h-5 w-5" />
+              <Sparkles className="ml-2 h-4 w-4 animate-glow" />
             </Button>
           </Link>
-          <p className="text-muted-foreground mt-4">
-            Join 500+ users with AI-customized fitness programs
+          <p className="text-muted-foreground text-[10px] mt-4 uppercase">
+            Join 500+ active profiles with tailored biomechanics programs
           </p>
         </div>
       </div>

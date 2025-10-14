@@ -6,8 +6,10 @@ import { vapi } from "@/lib/vapi";
 import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { useAppServices } from "@/providers/AppServicesProvider";
+import LocalVoiceAssistant from "@/components/LocalVoiceAssistant";
 
-const GenerateProgramPage = () => {
+const CloudVoiceAssistant = () => {
   const [callActive, setCallActive] = useState(false);
   const [connecting, setConnecting] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -100,8 +102,8 @@ const GenerateProgramPage = () => {
       setCallActive(false);
     };
 
-    vapi
-      .on("call-start", handleCallStart)
+    vapi?.
+      on("call-start", handleCallStart)
       .on("call-end", handleCallEnd)
       .on("speech-start", handleSpeechStart)
       .on("speech-end", handleSpeechEnd)
@@ -110,8 +112,8 @@ const GenerateProgramPage = () => {
 
     // cleanup event listeners on unmount
     return () => {
-      vapi
-        .off("call-start", handleCallStart)
+      vapi?.
+        off("call-start", handleCallStart)
         .off("call-end", handleCallEnd)
         .off("speech-start", handleSpeechStart)
         .off("speech-end", handleSpeechEnd)
@@ -121,7 +123,7 @@ const GenerateProgramPage = () => {
   }, []);
 
   const toggleCall = async () => {
-    if (callActive) vapi.stop();
+    if (callActive) vapi?.stop();
     else {
       try {
         setConnecting(true);
@@ -132,7 +134,7 @@ const GenerateProgramPage = () => {
           ? `${user.firstName} ${user.lastName || ""}`.trim()
           : "There";
 
-        await vapi.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, {
+        await vapi?.start(process.env.NEXT_PUBLIC_VAPI_WORKFLOW_ID!, {
           variableValues: {
             full_name: fullName,
             user_id: user?.id,
@@ -321,4 +323,15 @@ const GenerateProgramPage = () => {
     </div>
   );
 };
+
+const GenerateProgramPage = () => {
+  const { isCloudActive } = useAppServices();
+
+  if (!isCloudActive) {
+    return <LocalVoiceAssistant />;
+  }
+
+  return <CloudVoiceAssistant />;
+};
+
 export default GenerateProgramPage;

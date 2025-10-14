@@ -3,6 +3,11 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 const isProtectedRoute = createRouteMatcher(["/generate-program", "/profile"]);
 
 export default clerkMiddleware(async (auth, req) => {
+  // If Clerk publishable key is not defined, bypass middleware checks to allow local mock mode
+  if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
+    return;
+  }
+  
   if (isProtectedRoute(req)) await auth.protect();
 });
 

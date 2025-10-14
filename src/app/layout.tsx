@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 import ConvexClerkProvider from "@/providers/ConvexClerkProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "CodeFlex AI - Get Jacked",
-  description: "A modern fitness AI platform to get jacked for free.",
+  title: "CodeFlex AI - Premium Gamified AI Fitness Trainer",
+  description: "Generate personalized workouts and macro targets using advanced AI models. Train with rest stopwatch trackers, voice integration, and custom trophies.",
 };
 
 export default function RootLayout({
@@ -27,21 +28,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ConvexClerkProvider>
-      <html lang="en">
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="en">
+      <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased min-h-screen flex flex-col`}>
+        <ConvexClerkProvider>
           <Navbar />
+          
+          {/* Animated aurora glow effect in background */}
+          <div className="fixed top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-aurora pointer-events-none z-0" />
+          <div className="fixed bottom-10 right-1/4 w-96 h-96 bg-cyber-violet/10 rounded-full blur-3xl animate-aurora pointer-events-none z-0" style={{ animationDelay: "-5s" }} />
 
-          {/* GRID BACKGROUND */}
-          <div className="fixed inset-0 -z-1">
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background"></div>
-            <div className="absolute inset-0 bg-[linear-gradient(var(--cyber-grid-color)_1px,transparent_1px),linear-gradient(90deg,var(--cyber-grid-color)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-          </div>
-
-          <main className="pt-24 flex-grow">{children}</main>
+          <main className="flex-grow pt-20 relative z-10">
+            <PageTransition>
+              {children}
+            </PageTransition>
+          </main>
+          
           <Footer />
-        </body>
-      </html>
-    </ConvexClerkProvider>
+        </ConvexClerkProvider>
+      </body>
+    </html>
   );
 }
