@@ -795,3 +795,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Sat Feb 07 2026 09:05:49]: Webdev: Practiced React 19 useActionState and Form handling | DSA: Solved LeetCode 21: Merge Two Sorted Lists (Linked List) -->
 
 <!-- Practice: [Sun Feb 08 2026 14:37:46]: Webdev: Set up Clerk webhook handlers for user sync | DSA: Solved LeetCode 20: Valid Parentheses (Stack) -->
+
+<!-- Practice: [Sun Feb 08 2026 14:41:16]: Webdev: Learned about server-side performance optimization in Next.js | DSA: Solved LeetCode 70: Climbing Stairs (Dynamic Programming) -->
