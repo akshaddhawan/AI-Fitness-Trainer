@@ -797,3 +797,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Sun Feb 08 2026 14:37:46]: Webdev: Set up Clerk webhook handlers for user sync | DSA: Solved LeetCode 20: Valid Parentheses (Stack) -->
 
 <!-- Practice: [Sun Feb 08 2026 14:41:16]: Webdev: Learned about server-side performance optimization in Next.js | DSA: Solved LeetCode 70: Climbing Stairs (Dynamic Programming) -->
+
+<!-- Practice: [Mon Feb 09 2026 18:31:14]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 98: Validate Binary Search Tree -->
