@@ -803,3 +803,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Sun Feb 15 2026 12:39:12]: Webdev: Analyzed Next.js Middleware route protection | DSA: Solved LeetCode 70: Climbing Stairs (Dynamic Programming) -->
 
 <!-- Practice: [Mon Feb 16 2026 13:56:39]: Webdev: Set up Clerk webhook handlers for user sync | DSA: Solved LeetCode 226: Invert Binary Tree -->
+
+<!-- Practice: [Mon Feb 16 2026 16:33:37]: Webdev: Reviewed Next.js 15 Server Actions and PPR | DSA: Solved LeetCode 53: Maximum Subarray (Kadane's Algorithm) -->
