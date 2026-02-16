@@ -801,3 +801,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Mon Feb 09 2026 18:31:14]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 98: Validate Binary Search Tree -->
 
 <!-- Practice: [Sun Feb 15 2026 12:39:12]: Webdev: Analyzed Next.js Middleware route protection | DSA: Solved LeetCode 70: Climbing Stairs (Dynamic Programming) -->
+
+<!-- Practice: [Mon Feb 16 2026 13:56:39]: Webdev: Set up Clerk webhook handlers for user sync | DSA: Solved LeetCode 226: Invert Binary Tree -->
