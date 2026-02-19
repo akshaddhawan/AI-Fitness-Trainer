@@ -809,3 +809,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Wed Feb 18 2026 09:38:39]: Webdev: Set up Clerk webhook handlers for user sync | DSA: Solved LeetCode 121: Best Time to Buy and Sell Stock (Two Pointers) -->
 
 <!-- Practice: [Wed Feb 18 2026 12:16:16]: Webdev: Optimized Tailwind CSS layout responsiveness | DSA: Solved LeetCode 704: Binary Search -->
+
+<!-- Practice: [Thu Feb 19 2026 09:53:56]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 1: Two Sum (Hash Map) -->
