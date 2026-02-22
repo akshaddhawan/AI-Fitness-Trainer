@@ -813,3 +813,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Thu Feb 19 2026 09:53:56]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 1: Two Sum (Hash Map) -->
 
 <!-- Practice: [Thu Feb 19 2026 11:21:23]: Webdev: Explored Vapi Voice AI integration and session events | DSA: Solved LeetCode 226: Invert Binary Tree -->
+
+<!-- Practice: [Sun Feb 22 2026 16:09:05]: Webdev: Optimized Tailwind CSS layout responsiveness | DSA: Solved LeetCode 704: Binary Search -->
