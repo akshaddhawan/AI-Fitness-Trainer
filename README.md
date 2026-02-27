@@ -817,3 +817,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Sun Feb 22 2026 16:09:05]: Webdev: Optimized Tailwind CSS layout responsiveness | DSA: Solved LeetCode 704: Binary Search -->
 
 <!-- Practice: [Fri Feb 27 2026 17:03:49]: Webdev: Implemented custom hooks for state persistence | DSA: Solved LeetCode 141: Linked List Cycle (Floyd's Cycle Finding) -->
+
+<!-- Practice: [Fri Feb 27 2026 18:21:05]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 206: Reverse Linked List -->
