@@ -815,3 +815,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Thu Feb 19 2026 11:21:23]: Webdev: Explored Vapi Voice AI integration and session events | DSA: Solved LeetCode 226: Invert Binary Tree -->
 
 <!-- Practice: [Sun Feb 22 2026 16:09:05]: Webdev: Optimized Tailwind CSS layout responsiveness | DSA: Solved LeetCode 704: Binary Search -->
+
+<!-- Practice: [Fri Feb 27 2026 17:03:49]: Webdev: Implemented custom hooks for state persistence | DSA: Solved LeetCode 141: Linked List Cycle (Floyd's Cycle Finding) -->
