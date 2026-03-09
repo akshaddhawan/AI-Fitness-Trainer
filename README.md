@@ -823,3 +823,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Sat Mar 07 2026 14:30:51]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 141: Linked List Cycle (Floyd's Cycle Finding) -->
 
 <!-- Practice: [Sat Mar 07 2026 17:24:20]: Webdev: Optimized Tailwind CSS layout responsiveness | DSA: Solved LeetCode 20: Valid Parentheses (Stack) -->
+
+<!-- Practice: [Mon Mar 09 2026 14:53:44]: Webdev: Reviewed Convex database query indexing and mutations | DSA: Solved LeetCode 20: Valid Parentheses (Stack) -->
