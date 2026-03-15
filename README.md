@@ -829,3 +829,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Wed Mar 11 2026 17:23:23]: Webdev: Analyzed Next.js Middleware route protection | DSA: Solved LeetCode 242: Valid Anagram -->
 
 <!-- Practice: [Wed Mar 11 2026 17:41:53]: Webdev: Reviewed Next.js 15 Server Actions and PPR | DSA: Solved LeetCode 226: Invert Binary Tree -->
+
+<!-- Practice: [Sun Mar 15 2026 14:35:54]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 21: Merge Two Sorted Lists (Linked List) -->
