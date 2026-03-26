@@ -833,3 +833,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Sun Mar 15 2026 14:35:54]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 21: Merge Two Sorted Lists (Linked List) -->
 
 <!-- Practice: [Thu Mar 26 2026 11:07:41]: Webdev: Practiced React 19 useActionState and Form handling | DSA: Solved LeetCode 70: Climbing Stairs (Dynamic Programming) -->
+
+<!-- Practice: [Thu Mar 26 2026 11:16:43]: Webdev: Implemented custom hooks for state persistence | DSA: Solved LeetCode 206: Reverse Linked List -->
