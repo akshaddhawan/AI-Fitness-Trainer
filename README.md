@@ -831,3 +831,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Wed Mar 11 2026 17:41:53]: Webdev: Reviewed Next.js 15 Server Actions and PPR | DSA: Solved LeetCode 226: Invert Binary Tree -->
 
 <!-- Practice: [Sun Mar 15 2026 14:35:54]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 21: Merge Two Sorted Lists (Linked List) -->
+
+<!-- Practice: [Thu Mar 26 2026 11:07:41]: Webdev: Practiced React 19 useActionState and Form handling | DSA: Solved LeetCode 70: Climbing Stairs (Dynamic Programming) -->
