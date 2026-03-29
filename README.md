@@ -837,3 +837,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Thu Mar 26 2026 11:16:43]: Webdev: Implemented custom hooks for state persistence | DSA: Solved LeetCode 206: Reverse Linked List -->
 
 <!-- Practice: [Sun Mar 29 2026 11:12:57]: Webdev: Analyzed Next.js Middleware route protection | DSA: Solved LeetCode 98: Validate Binary Search Tree -->
+
+<!-- Practice: [Sun Mar 29 2026 15:38:08]: Webdev: Explored Vapi Voice AI integration and session events | DSA: Solved LeetCode 226: Invert Binary Tree -->
