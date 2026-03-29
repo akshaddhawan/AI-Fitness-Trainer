@@ -835,3 +835,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Thu Mar 26 2026 11:07:41]: Webdev: Practiced React 19 useActionState and Form handling | DSA: Solved LeetCode 70: Climbing Stairs (Dynamic Programming) -->
 
 <!-- Practice: [Thu Mar 26 2026 11:16:43]: Webdev: Implemented custom hooks for state persistence | DSA: Solved LeetCode 206: Reverse Linked List -->
+
+<!-- Practice: [Sun Mar 29 2026 11:12:57]: Webdev: Analyzed Next.js Middleware route protection | DSA: Solved LeetCode 98: Validate Binary Search Tree -->
