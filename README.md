@@ -841,3 +841,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Sun Mar 29 2026 15:38:08]: Webdev: Explored Vapi Voice AI integration and session events | DSA: Solved LeetCode 226: Invert Binary Tree -->
 
 <!-- Practice: [Mon Mar 30 2026 12:13:30]: Webdev: Set up Clerk webhook handlers for user sync | DSA: Solved LeetCode 104: Maximum Depth of Binary Tree (DFS) -->
+
+<!-- Practice: [Mon Mar 30 2026 16:06:46]: Webdev: Optimized Tailwind CSS layout responsiveness | DSA: Solved LeetCode 206: Reverse Linked List -->
