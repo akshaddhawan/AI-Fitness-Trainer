@@ -843,3 +843,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Mon Mar 30 2026 12:13:30]: Webdev: Set up Clerk webhook handlers for user sync | DSA: Solved LeetCode 104: Maximum Depth of Binary Tree (DFS) -->
 
 <!-- Practice: [Mon Mar 30 2026 16:06:46]: Webdev: Optimized Tailwind CSS layout responsiveness | DSA: Solved LeetCode 206: Reverse Linked List -->
+
+<!-- Practice: [Tue Apr 07 2026 16:10:44]: Webdev: Implemented custom hooks for state persistence | DSA: Solved LeetCode 53: Maximum Subarray (Kadane's Algorithm) -->
