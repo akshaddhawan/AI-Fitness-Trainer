@@ -847,3 +847,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Tue Apr 07 2026 16:10:44]: Webdev: Implemented custom hooks for state persistence | DSA: Solved LeetCode 53: Maximum Subarray (Kadane's Algorithm) -->
 
 <!-- Practice: [Tue Apr 14 2026 13:36:52]: Webdev: Learned about server-side performance optimization in Next.js | DSA: Solved LeetCode 70: Climbing Stairs (Dynamic Programming) -->
+
+<!-- Practice: [Tue Apr 14 2026 14:35:40]: Webdev: Optimized Tailwind CSS layout responsiveness | DSA: Solved LeetCode 141: Linked List Cycle (Floyd's Cycle Finding) -->
