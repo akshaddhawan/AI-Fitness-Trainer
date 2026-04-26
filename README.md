@@ -849,3 +849,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Tue Apr 14 2026 13:36:52]: Webdev: Learned about server-side performance optimization in Next.js | DSA: Solved LeetCode 70: Climbing Stairs (Dynamic Programming) -->
 
 <!-- Practice: [Tue Apr 14 2026 14:35:40]: Webdev: Optimized Tailwind CSS layout responsiveness | DSA: Solved LeetCode 141: Linked List Cycle (Floyd's Cycle Finding) -->
+
+<!-- Practice: [Sun Apr 26 2026 12:33:05]: Webdev: Optimized Tailwind CSS layout responsiveness | DSA: Solved LeetCode 98: Validate Binary Search Tree -->
