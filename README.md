@@ -855,3 +855,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Wed Apr 29 2026 11:28:59]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 704: Binary Search -->
 
 <!-- Practice: [Wed May 06 2026 14:21:19]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 20: Valid Parentheses (Stack) -->
+
+<!-- Practice: [Wed May 06 2026 15:21:39]: Webdev: Explored Vapi Voice AI integration and session events | DSA: Solved LeetCode 206: Reverse Linked List -->
