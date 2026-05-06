@@ -853,3 +853,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Sun Apr 26 2026 12:33:05]: Webdev: Optimized Tailwind CSS layout responsiveness | DSA: Solved LeetCode 98: Validate Binary Search Tree -->
 
 <!-- Practice: [Wed Apr 29 2026 11:28:59]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 704: Binary Search -->
+
+<!-- Practice: [Wed May 06 2026 14:21:19]: Webdev: Practiced CSS Grid and Flexbox centering techniques | DSA: Solved LeetCode 20: Valid Parentheses (Stack) -->
