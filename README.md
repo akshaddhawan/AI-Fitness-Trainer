@@ -859,3 +859,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Wed May 06 2026 15:21:39]: Webdev: Explored Vapi Voice AI integration and session events | DSA: Solved LeetCode 206: Reverse Linked List -->
 
 <!-- Practice: [Tue May 12 2026 10:52:29]: Webdev: Set up Clerk webhook handlers for user sync | DSA: Solved LeetCode 226: Invert Binary Tree -->
+
+<!-- Practice: [Thu May 14 2026 13:55:57]: Webdev: Reviewed shadcn/ui accordion and tabs accessibility | DSA: Solved LeetCode 242: Valid Anagram -->
