@@ -865,3 +865,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Mon May 18 2026 09:19:30]: Webdev: Reviewed Next.js 15 Server Actions and PPR | DSA: Solved LeetCode 20: Valid Parentheses (Stack) -->
 
 <!-- Practice: [Mon May 18 2026 13:02:35]: Webdev: Practiced React 19 useActionState and Form handling | DSA: Solved LeetCode 141: Linked List Cycle (Floyd's Cycle Finding) -->
+
+<!-- Practice: [Mon May 25 2026 13:13:26]: Webdev: Reviewed shadcn/ui accordion and tabs accessibility | DSA: Solved LeetCode 1: Two Sum (Hash Map) -->
