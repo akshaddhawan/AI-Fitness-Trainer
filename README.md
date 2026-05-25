@@ -867,3 +867,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Mon May 18 2026 13:02:35]: Webdev: Practiced React 19 useActionState and Form handling | DSA: Solved LeetCode 141: Linked List Cycle (Floyd's Cycle Finding) -->
 
 <!-- Practice: [Mon May 25 2026 13:13:26]: Webdev: Reviewed shadcn/ui accordion and tabs accessibility | DSA: Solved LeetCode 1: Two Sum (Hash Map) -->
+
+<!-- Practice: [Mon May 25 2026 17:48:05]: Webdev: Learned about server-side performance optimization in Next.js | DSA: Solved LeetCode 104: Maximum Depth of Binary Tree (DFS) -->
