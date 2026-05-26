@@ -869,3 +869,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Mon May 25 2026 13:13:26]: Webdev: Reviewed shadcn/ui accordion and tabs accessibility | DSA: Solved LeetCode 1: Two Sum (Hash Map) -->
 
 <!-- Practice: [Mon May 25 2026 17:48:05]: Webdev: Learned about server-side performance optimization in Next.js | DSA: Solved LeetCode 104: Maximum Depth of Binary Tree (DFS) -->
+
+<!-- Practice: [Tue May 26 2026 11:53:25]: Webdev: Implemented custom hooks for state persistence | DSA: Solved LeetCode 53: Maximum Subarray (Kadane's Algorithm) -->
