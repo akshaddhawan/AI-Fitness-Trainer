@@ -871,3 +871,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Mon May 25 2026 17:48:05]: Webdev: Learned about server-side performance optimization in Next.js | DSA: Solved LeetCode 104: Maximum Depth of Binary Tree (DFS) -->
 
 <!-- Practice: [Tue May 26 2026 11:53:25]: Webdev: Implemented custom hooks for state persistence | DSA: Solved LeetCode 53: Maximum Subarray (Kadane's Algorithm) -->
+
+<!-- Practice: [Fri May 29 2026 12:36:00]: Webdev: Configured ESLint rules for TypeScript strict type checking | DSA: Solved LeetCode 141: Linked List Cycle (Floyd's Cycle Finding) -->
