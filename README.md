@@ -881,3 +881,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Mon Jun 01 2026 17:15:14]: Webdev: Optimized Tailwind CSS layout responsiveness | DSA: Solved LeetCode 21: Merge Two Sorted Lists (Linked List) -->
 
 <!-- Practice: [Tue Jun 02 2026 16:07:20]: Webdev: Implemented custom hooks for state persistence | DSA: Solved LeetCode 242: Valid Anagram -->
+
+<!-- Practice: [Tue Jun 02 2026 17:32:31]: Webdev: Set up Clerk webhook handlers for user sync | DSA: Solved LeetCode 21: Merge Two Sorted Lists (Linked List) -->
