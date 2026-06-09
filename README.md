@@ -885,3 +885,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Tue Jun 02 2026 17:32:31]: Webdev: Set up Clerk webhook handlers for user sync | DSA: Solved LeetCode 21: Merge Two Sorted Lists (Linked List) -->
 
 <!-- Practice: [Thu Jun 04 2026 16:37:43]: Webdev: Analyzed Next.js Middleware route protection | DSA: Solved LeetCode 98: Validate Binary Search Tree -->
+
+<!-- Practice: [Tue Jun 09 2026 12:47:01]: Webdev: Learned about server-side performance optimization in Next.js | DSA: Solved LeetCode 70: Climbing Stairs (Dynamic Programming) -->
