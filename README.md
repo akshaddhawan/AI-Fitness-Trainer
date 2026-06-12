@@ -887,3 +887,5 @@ To learn more about the technologies used in this project:
 <!-- Practice: [Thu Jun 04 2026 16:37:43]: Webdev: Analyzed Next.js Middleware route protection | DSA: Solved LeetCode 98: Validate Binary Search Tree -->
 
 <!-- Practice: [Tue Jun 09 2026 12:47:01]: Webdev: Learned about server-side performance optimization in Next.js | DSA: Solved LeetCode 70: Climbing Stairs (Dynamic Programming) -->
+
+<!-- Practice: [Fri Jun 12 2026 10:21:12]: Webdev: Learned about server-side performance optimization in Next.js | DSA: Solved LeetCode 98: Validate Binary Search Tree -->
